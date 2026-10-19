@@ -1,0 +1,6 @@
+topology: grid
+nodes: 10
+rate: 500
+flows: 3
+queueCapacity: 8
+processing: 3

@@ -1,0 +1,4 @@
+topology: diamond
+nodes: 4
+slowProcessing: 30
+deadline: 25

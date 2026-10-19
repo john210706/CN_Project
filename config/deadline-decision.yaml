@@ -1,0 +1,10 @@
+# Controlled diagnostic: optional receiver fault injection is explicitly enabled on C.
+topology: diamond
+nodes: 4
+deadline: 25
+slowProcessing: 6
+maxHoldoff: 80
+rate: 5
+weights: [0.2, 0.2, 0.5, 0.1]
+lossNode: 2
+loss: 0.1

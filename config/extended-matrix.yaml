@@ -1,0 +1,189 @@
+{
+  "base": {
+    "duration": 4.0,
+    "start": 0.8,
+    "stop": 2.5,
+    "topology": "grid",
+    "nodes": 10
+  },
+  "protocols": [
+    "fixed",
+    "opportunistic",
+    "deadline_aware"
+  ],
+  "seeds": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10
+  ],
+  "scenarios": [
+    {
+      "name": "deadline-50",
+      "settings": {
+        "deadline": 50,
+        "rate": 100
+      }
+    },
+    {
+      "name": "deadline-100",
+      "settings": {
+        "deadline": 100,
+        "rate": 100
+      }
+    },
+    {
+      "name": "deadline-200",
+      "settings": {
+        "deadline": 200,
+        "rate": 100
+      }
+    },
+    {
+      "name": "deadline-300",
+      "settings": {
+        "deadline": 300,
+        "rate": 100
+      }
+    },
+    {
+      "name": "deadline-500",
+      "settings": {
+        "deadline": 500,
+        "rate": 100
+      }
+    },
+    {
+      "name": "load-20",
+      "settings": {
+        "rate": 20,
+        "processing": 3,
+        "queueCapacity": 8
+      }
+    },
+    {
+      "name": "load-100",
+      "settings": {
+        "rate": 100,
+        "processing": 3,
+        "queueCapacity": 8
+      }
+    },
+    {
+      "name": "load-500",
+      "settings": {
+        "rate": 500,
+        "processing": 3,
+        "queueCapacity": 8
+      }
+    },
+    {
+      "name": "density-10",
+      "settings": {
+        "nodes": 10,
+        "topology": "random",
+        "area": 250
+      }
+    },
+    {
+      "name": "density-20",
+      "settings": {
+        "nodes": 20,
+        "topology": "random",
+        "area": 250
+      }
+    },
+    {
+      "name": "density-30",
+      "settings": {
+        "nodes": 30,
+        "topology": "random",
+        "area": 250
+      }
+    },
+    {
+      "name": "channel-2_6",
+      "settings": {
+        "pathLoss": 2.6
+      }
+    },
+    {
+      "name": "channel-3_0",
+      "settings": {
+        "pathLoss": 3.0
+      }
+    },
+    {
+      "name": "channel-3_8",
+      "settings": {
+        "pathLoss": 3.8
+      }
+    },
+    {
+      "name": "mobility-0",
+      "settings": {
+        "topology": "mobile",
+        "nodes": 20,
+        "area": 250,
+        "mobility": "static",
+        "speed": 0
+      }
+    },
+    {
+      "name": "mobility-5",
+      "settings": {
+        "topology": "mobile",
+        "nodes": 20,
+        "area": 250,
+        "mobility": "waypoint",
+        "speed": 5
+      }
+    },
+    {
+      "name": "mobility-15",
+      "settings": {
+        "topology": "mobile",
+        "nodes": 20,
+        "area": 250,
+        "mobility": "waypoint",
+        "speed": 15
+      }
+    },
+    {
+      "name": "density-50",
+      "settings": {
+        "nodes": 50,
+        "topology": "random",
+        "area": 250
+      }
+    },
+    {
+      "name": "weights-link",
+      "settings": {
+        "weights": [
+          0.6,
+          0.2,
+          0.1,
+          0.1
+        ]
+      }
+    },
+    {
+      "name": "weights-slack",
+      "settings": {
+        "weights": [
+          0.1,
+          0.2,
+          0.6,
+          0.1
+        ]
+      }
+    }
+  ]
+}

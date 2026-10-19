@@ -1,0 +1,12 @@
+.tools/
+.venv/
+vendor/
+__pycache__/
+.pytest_cache/
+results/raw/
+results/processed/
+results/figures/
+results/reports/
+*.log
+results/debug/
+results/pilot/

@@ -1,0 +1,53 @@
+{
+  "base": {
+    "duration": 4.0,
+    "start": 0.8,
+    "stop": 2.5,
+    "topology": "grid",
+    "nodes": 10
+  },
+  "protocols": [
+    "fixed",
+    "opportunistic",
+    "deadline_aware"
+  ],
+  "seeds": [
+    1,
+    2,
+    3,
+    4,
+    5
+  ],
+  "scenarios": [
+    {
+      "name": "density-50",
+      "settings": {
+        "nodes": 50,
+        "topology": "random",
+        "area": 250
+      }
+    },
+    {
+      "name": "weights-link",
+      "settings": {
+        "weights": [
+          0.6,
+          0.2,
+          0.1,
+          0.1
+        ]
+      }
+    },
+    {
+      "name": "weights-slack",
+      "settings": {
+        "weights": [
+          0.1,
+          0.2,
+          0.6,
+          0.1
+        ]
+      }
+    }
+  ]
+}

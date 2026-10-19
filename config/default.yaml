@@ -1,0 +1,38 @@
+protocol: deadline_aware
+topology: grid
+nodes: 10
+mobility: static
+traffic: constant
+duration: 5.0
+start: 1.0
+stop: 4.0
+rate: 20.0
+payload: 256
+flows: 1
+seed: 1
+run: 1
+spacing: 80.0
+area: 400.0
+range: 125.0
+power: 30.0
+pathLoss: 3.0
+rateMode: OfdmRate6Mbps
+speed: 5.0
+pause: 0.2
+processing: 1.0
+slowProcessing: 30.0
+queueCapacity: 32
+maxHops: 32
+minHoldoff: 0.5
+maxHoldoff: 5.0
+safety: 0.5
+perHop: 3.0
+hello: 0.1
+deadline: 0.0
+deadlines: [50, 100, 500, 1000]
+mix: [0.25, 0.25, 0.25, 0.25]
+weights: [0.3, 0.3, 0.3, 0.1]
+loss: 0.0
+lossNode: 4294967295
+pairs: []
+diamondHeight: 20.0
