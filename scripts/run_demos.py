@@ -50,6 +50,10 @@ def main():
             ]
         for conf in configs:
             path, m = run(load_config(overrides=conf))
+            meta_path = path / "run_metadata.json"
+            metadata = json.loads(meta_path.read_text())
+            metadata["demo"] = name
+            meta_path.write_text(json.dumps(metadata, indent=2))
             results.append({"demo": name, "path": str(path), "metrics": m})
             print(name, path, f"DSDR={m['dsdr_pct']:.2f}%")
     dest = ROOT / "results/reports/demos.json"

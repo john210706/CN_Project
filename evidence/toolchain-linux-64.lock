@@ -1,5 +1,5 @@
-List of packages in environment: "/home/J4hn/Documents/John_Projects/CNProject/.tools/env"
-
+# Exact Linux x86_64 toolchain used for validation
+@EXPLICIT
 https://conda.anaconda.org/conda-forge/linux-64/_openmp_mutex-4.5-20_gnu.conda
 https://conda.anaconda.org/conda-forge/linux-64/binutils_impl_linux-64-2.46.1-default_hfdba357_103.conda
 https://conda.anaconda.org/conda-forge/linux-64/bzip2-1.0.8-hda65f42_10.conda

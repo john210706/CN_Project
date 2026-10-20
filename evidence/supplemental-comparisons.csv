@@ -1,0 +1,7 @@
+batch,scenario,baseline,dsdr_difference_pp,dsdr_relative_change_pct
+20261019T192957_45fe78,density-50,fixed,10.0,11.11111111111111
+20261019T192957_45fe78,density-50,opportunistic,0.0,0.0
+20261019T192957_45fe78,weights-link,fixed,0.0,0.0
+20261019T192957_45fe78,weights-link,opportunistic,0.0,0.0
+20261019T192957_45fe78,weights-slack,fixed,0.0,0.0
+20261019T192957_45fe78,weights-slack,opportunistic,0.0,0.0

@@ -183,6 +183,10 @@ Against fixed, the proposed method has a higher observed mean in 3 scenario/batc
 
 Against opportunistic, the proposed method has a higher observed mean in 0 scenario/batch comparisons, a lower mean in 1, and an equal mean in 19. These counts are descriptive, not significance tests.
 
+The executed matrix does **not support a general DSDR advantage over basic opportunistic forwarding**: no scenario has a higher proposed mean. Distinct candidate decisions are verified, but that mechanism alone is insufficient evidence of better end-to-end performance.
+
+At 500 packets/s/flow, observed mean DSDR is deadline_aware: 62.40%, fixed: 65.15%, opportunistic: 63.36%. This stress case favors the fixed baseline in the tested connected topology.
+
 ### Source provenance and figures
 
 - Batch `20261019T192805_cab57b`: 255 runs. [Run manifest](../results/raw/20261019T192805_cab57b/analysis/runs.csv), [aggregate table](../results/raw/20261019T192805_cab57b/analysis/aggregate.csv).

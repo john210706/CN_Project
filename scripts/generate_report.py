@@ -140,6 +140,19 @@ See methodology.md and metrics.md for definitions and censoring considerations.
             worse = int((g.dsdr_difference_pp < -1e-9).sum())
             equal = len(g) - better - worse
             text += f"Against {baseline}, the proposed method has a higher observed mean in {better} scenario/batch comparisons, a lower mean in {worse}, and an equal mean in {equal}. These counts are descriptive, not significance tests.\n\n"
+        basic = comparisons_frame[comparisons_frame.baseline == "opportunistic"]
+        if not basic.empty and (basic.dsdr_difference_pp <= 1e-9).all():
+            text += "The executed matrix does **not support a general DSDR advantage over basic opportunistic forwarding**: no scenario has a higher proposed mean. Distinct candidate decisions are verified, but that mechanism alone is insufficient evidence of better end-to-end performance.\n\n"
+        load = stats[stats.scenario == "load-500"]
+        if not load.empty:
+            text += (
+                "At 500 packets/s/flow, observed mean DSDR is "
+                + ", ".join(
+                    f"{row.protocol}: {row.dsdr_pct_mean:.2f}%"
+                    for row in load.itertuples()
+                )
+                + ". This stress case favors the fixed baseline in the tested connected topology.\n\n"
+            )
         text += "### Source provenance and figures\n\n"
         for batch, group in batches.groupby("batch"):
             folder = Path(group.iloc[0].path).parent

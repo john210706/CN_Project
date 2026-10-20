@@ -1,0 +1,11 @@
+.venv/bin/python scripts/run_demos.py
+wireless /home/J4hn/Documents/John_Projects/CNProject/results/raw/20261020T032239_deadline_aware_d5be6647 DSDR=100.00%
+broadcast /home/J4hn/Documents/John_Projects/CNProject/results/raw/20261020T032240_opportunistic_3b554b24 DSDR=100.00%
+suppression /home/J4hn/Documents/John_Projects/CNProject/results/raw/20261020T032240_opportunistic_575d7824 DSDR=100.00%
+deadline /home/J4hn/Documents/John_Projects/CNProject/results/raw/20261020T032240_fixed_cf551485 DSDR=100.00%
+deadline /home/J4hn/Documents/John_Projects/CNProject/results/raw/20261020T032240_opportunistic_e2913142 DSDR=100.00%
+deadline /home/J4hn/Documents/John_Projects/CNProject/results/raw/20261020T032240_deadline_aware_2d94ee84 DSDR=93.33%
+expiration /home/J4hn/Documents/John_Projects/CNProject/results/raw/20261020T032240_deadline_aware_4cc8e759 DSDR=0.00%
+multihop /home/J4hn/Documents/John_Projects/CNProject/results/raw/20261020T032240_deadline_aware_e5df659c DSDR=100.00%
+congestion /home/J4hn/Documents/John_Projects/CNProject/results/raw/20261020T032240_deadline_aware_a1bdb042 DSDR=19.36%
+mobility /home/J4hn/Documents/John_Projects/CNProject/results/raw/20261020T032241_deadline_aware_db3d94e2 DSDR=0.00%

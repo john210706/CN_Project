@@ -113,3 +113,17 @@ See [limitations](docs/limitations.md), [algorithm](docs/algorithm.md), and
 - [Biswas and Morris, ExOR, SIGCOMM 2005](https://conferences.sigcomm.org/sigcomm/2005/techprog.html)
 - [He et al., SPEED publications](https://www.cs.virginia.edu/~stankovic/sensornet.html)
 # CN_Project
+
+## Verified delivery
+
+The delivered environment passed **35 tests** and independently reconciled **329 stored
+runs**, including **300 controlled experiment runs** across 20 scenarios. The study does
+not show a general DSDR advantage over basic opportunistic forwarding; the report retains
+this negative finding. See [the academic report](docs/final-report.md),
+[validation evidence](evidence/validation.md), and [archived result tables](evidence/primary-aggregate.csv).
+
+To reproduce the exact Linux toolchain after downloading micromamba, use
+`.tools/bin/micromamba create -p "$PWD/.tools/env" -f evidence/toolchain-linux-64.lock`
+in a fresh checkout. The regular setup script installs compatible tools and pinned
+NS-3/Python direct dependencies; `evidence/python-lock.txt` records the validated full
+environment, including optional formatters used during development.

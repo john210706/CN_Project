@@ -207,3 +207,27 @@ def test_poisson_multiflow_and_waypoint(tmp_path):
     assert len(m["per_flow"]) == 2
     positions = pd.read_csv(p / "node_positions.csv")
     assert positions[positions.node_id == 1].x.nunique() > 1
+
+
+def test_hop_limit_and_malformed_result_handling(tmp_path):
+    from analysis.load_results import load_run
+
+    p, m = run(
+        load_config(
+            overrides={
+                "topology": "line",
+                "nodes": 5,
+                "maxHops": 1,
+                "start": 0.8,
+                "stop": 1.0,
+                "duration": 2.1,
+            }
+        ),
+        tmp_path,
+    )
+    assert m["unique_delivered"] == 0
+    e = read_events(p / "packet_events.csv")
+    assert "HOP_LIMIT" in set(e.drop_reason)
+    (p / "metrics.json").write_text("{}")
+    with pytest.raises(ValueError, match="metrics schema"):
+        load_run(p)

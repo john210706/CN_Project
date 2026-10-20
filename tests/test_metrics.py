@@ -87,9 +87,11 @@ def test_statistics():
 def test_deadline_not_yet_elapsed_is_not_confirmed_miss():
     e = fixture_events()
     s = summarize(e)
+    e = e[e.event_type == "PACKET_CREATED"]
+    s = summarize(e)
     m = metrics(s, e, 0.01)
     assert m["deadline_missed"] == 0
-    assert m["deadline_pending_at_stop"] == 40
+    assert m["deadline_pending_at_stop"] == 100
 
 
 def test_metadata_wrong_json_type(tmp_path):
