@@ -90,6 +90,16 @@ make netanim                    # starts in the newest trace directory
 
 In NetAnim, click the folder button, select `animation.xml`, and press Play.
 
+For a live presentation, run the simulator, print the main results, and launch NetAnim
+for the same run with one command:
+
+```bash
+.venv/bin/python scripts/presentation_demo.py
+```
+
+After the NetAnim demonstration, launch the supporting dashboard with
+`bash scripts/launch_dashboard.sh`.
+
 Batch directories also contain the input matrix, failure ledger, aggregate tables,
 percentage-point comparisons, and PNG/SVG figures under `analysis/figures/`.
 `docs/final-report.md` is generated from actual successful batch records.
