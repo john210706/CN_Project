@@ -81,8 +81,8 @@ def main() -> None:
 
     if args.no_viewer:
         return
-    print("\nOpening NetAnim. Select animation.xml, click R, set the speed")
-    print("toward Slow, and press Play. Close NetAnim to return here.\n", flush=True)
+    print("\nOpening NetAnim with this run loaded and playing automatically.")
+    print("Press Play again to replay after it finishes.\n", flush=True)
     subprocess.run(
         ["bash", str(ROOT / "scripts/launch_netanim.sh"), str(run_dir / "animation.xml")],
         cwd=ROOT,

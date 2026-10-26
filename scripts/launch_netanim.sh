@@ -13,6 +13,6 @@ fi
 
 xml="$(realpath "$xml")"
 echo "NetAnim is opening in $(dirname "$xml")"
-echo "Click the folder button, choose $(basename "$xml"), then press Play."
+echo "Loading $(basename "$xml") and starting playback automatically."
 cd "$(dirname "$xml")"
-exec "$viewer"
+exec "$viewer" "$xml"
