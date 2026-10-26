@@ -474,6 +474,11 @@ with experiments:
         st.download_button(
             f"Download {file}", (Path(selected) / file).read_bytes(), file_name=file
         )
+    animation = Path(selected) / "animation.xml"
+    if animation.exists():
+        st.download_button(
+            "Download NetAnim animation", animation.read_bytes(), file_name="animation.xml"
+        )
     report = ROOT / "docs/final-report.md"
     if report.exists():
         st.download_button(

@@ -39,6 +39,9 @@ def test_cpp():
 @pytest.mark.parametrize("protocol", ["fixed", "opportunistic", "deadline_aware"])
 def test_wireless_multihop(outputs, protocol):
     p, m, e, c = outputs[protocol]
+    animation = p / "animation.xml"
+    assert animation.exists() and animation.stat().st_size > 0
+    assert "<anim" in animation.read_text()[:500]
     assert m["generated"] > 0 and m["unique_delivered"] > 0
     assert m["mean_hops"] >= 2 and m["phy_transmissions"] > m["data_transmissions"]
     receptions = e[e.event_type == "PACKET_RX"]

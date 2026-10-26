@@ -10,5 +10,5 @@ if [[ -e "$target" && "$(readlink -f "$target")" != "$PROJECT_ROOT/simulation" ]
 fi
 ln -sfn "$PROJECT_ROOT/simulation" "$target"
 cd "$NS3_DIR"
-python3 ns3 configure --build-profile=release --enable-modules=core,network,internet,wifi,mobility --disable-examples --disable-tests -- -G Ninja
+python3 ns3 configure --build-profile=release --enable-modules=core,network,internet,wifi,mobility,netanim --disable-examples --disable-tests -- -G Ninja
 python3 ns3 build deadline-routing -j "${BUILD_JOBS:-2}"

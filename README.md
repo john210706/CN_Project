@@ -71,9 +71,24 @@ Each `results/raw/<run>/` contains:
 - `packet_events.csv`: received data, candidates, timers, UDP sends and delivery.
 - `radio_events.csv`: actual PHY transmission starts and reception failure events.
 - `node_positions.csv`: sampled NS-3 mobility positions.
+- `animation.xml`: NetAnim node, mobility, and packet-transmission trace.
 - `packet_summary.csv`: one row per generated packet, first delivery and deadline outcome.
 - `metrics.json` / `metrics.csv`: global metrics plus per-class and per-flow results.
 - `stdout.log` / `stderr.log`: simulator diagnostics.
+
+To view a run in NetAnim, launch the separate `NetAnim` desktop application, open the
+run's `animation.xml`, and press Play. NetAnim shows nodes, motion, and transmissions;
+the Streamlit dashboard remains the detailed view for deadlines, scores, and metrics.
+
+On the supported Linux x86_64 setup, install and launch the official NetAnim 3.110 viewer:
+
+```bash
+bash scripts/setup_netanim.sh
+make netanim                    # starts in the newest trace directory
+# or: bash scripts/launch_netanim.sh results/raw/<run>/animation.xml
+```
+
+In NetAnim, click the folder button, select `animation.xml`, and press Play.
 
 Batch directories also contain the input matrix, failure ledger, aggregate tables,
 percentage-point comparisons, and PNG/SVG figures under `analysis/figures/`.

@@ -3,6 +3,7 @@
 #include "ns3/core-module.h"
 #include "ns3/internet-module.h"
 #include "ns3/mobility-module.h"
+#include "ns3/netanim-module.h"
 #include "ns3/network-module.h"
 #include "ns3/wifi-module.h"
 
@@ -364,6 +365,21 @@ main(int argc, char** argv)
             }
         }
         Trace trace(c.output);
+        AnimationInterface animation(c.output + "/animation.xml");
+        animation.EnablePacketMetadata();
+        for (uint32_t i = 0; i < c.nodes; i++)
+        {
+            animation.UpdateNodeDescription(i, "Relay " + std::to_string(i));
+            animation.UpdateNodeColor(i, 229, 160, 40);
+            animation.UpdateNodeSize(i, 8, 8);
+        }
+        for (const auto& [source, destination] : c.pairs)
+        {
+            animation.UpdateNodeDescription(source, "Source " + std::to_string(source));
+            animation.UpdateNodeColor(source, 59, 130, 246);
+            animation.UpdateNodeDescription(destination, "Destination " + std::to_string(destination));
+            animation.UpdateNodeColor(destination, 0, 201, 167);
+        }
         std::vector<Ptr<Routing>> apps;
         for (uint32_t i = 0; i < c.nodes; i++)
         {
